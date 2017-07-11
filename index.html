@@ -57,26 +57,45 @@
                     var ctx2 = canvas2.getContext("2d");
                     canvas2.width = width;
                     canvas2.height = height;
+                    var dmWBig = 825;
+                    var dmHBig = 140;
+                    var dmWSmall = 168;
+                    var dmHSmall = 35;
 
-                    if (height < 2048) {
-                        var imageData = ctx.getImageData(1228, 838, 820, 140);
-                        var imageData2 = ctx.getImageData(0, 1303, 168, 35);
+                    if (height > 0 && height <= 1700) {
+                        var xp = 1276;
+                        var yp = width - 820;
+                        var imageData = ctx.getImageData(xp, yp, dmWBig, dmHBig);
+                        var imageData2 = ctx.getImageData(0, 1303, dmWSmall, dmHSmall);
                         ctx2.drawImage(img2, 0, 0);
-                        ctx2.putImageData(imageData, 1228, 838);
+                        ctx2.putImageData(imageData, xp, yp);
                         ctx2.putImageData(imageData2, 0, 1303);
-                    } else {
-                        var imageData = ctx.getImageData(width - 825, 1295, 825, 140);
-                        var imageData2 = ctx.getImageData(0, 1986, 168, 35);
+                    } else if (height == 2048) {
+                        var xp = width - dmWBig;
+                        var yp = 1295;
+                        var imageData = ctx.getImageData(xp, yp, dmWBig, dmHBig);
+                        var imageData2 = ctx.getImageData(0, 1986, dmWSmall, dmHSmall);
                         ctx2.drawImage(img2, 0, 0);
-                        ctx2.putImageData(imageData, width - 825, 1295);
+                        ctx2.putImageData(imageData, xp, yp);
                         ctx2.putImageData(imageData2, 0, 1986);
+                    } else {
+                        var xp = 1228;
+                        var yp = 838;
+                        var imageData = ctx.getImageData(xp, yp, dmWBig, dmHBig);
+                        var imageData2 = ctx.getImageData(0, 1303, dmWSmall, dmHSmall);
+                        ctx2.drawImage(img2, 0, 0);
+                        ctx2.putImageData(imageData, xp, yp);
+                        ctx2.putImageData(imageData2, 0, 1303);
                     }
+
                     var dstImg = $('#newImg').get(0);
                     var dataImg = canvas2.toDataURL("image/jpeg");
                     dstImg.src = dataImg;
                     $("body").css("cursor", "default");
 
                     download(myimg, dataImg);
+
+                    location.reload(); 
                 }
             }
 
