@@ -61,36 +61,23 @@
                     var dmHBig = 140;
                     var dmWSmall = 168;
                     var dmHSmall = 35;
-                    var xp = height / 3.34;
-                    var yp = width - dmWBig;
 
-                    var xpm = height - 65; 
-
-                    if (height > 0 && height <= 1700) {
-                        // var xp = 1276;
-                        // var yp = width - 820;
-                        var imageData = ctx.getImageData(xp, yp, dmWBig, dmHBig);
-                        var imageData2 = ctx.getImageData(0, xpm, dmWSmall, dmHSmall);
-                        ctx2.drawImage(img2, 0, 0);
-                        ctx2.putImageData(imageData, xp, yp);
-                        ctx2.putImageData(imageData2, 0, xpm);
-                    } else if (height == 2048) {
-                        // var xp = width - dmWBig;
-                        // var yp = 1295;
-                        var imageData = ctx.getImageData(xp, yp, dmWBig, dmHBig);
-                        var imageData2 = ctx.getImageData(0, xpm, dmWSmall, dmHSmall);
-                        ctx2.drawImage(img2, 0, 0);
-                        ctx2.putImageData(imageData, xp, yp);
-                        ctx2.putImageData(imageData2, 0, xpm);
-                    } else {
-                        // var xp = 1228;
-                        // var yp = 838;
-                        var imageData = ctx.getImageData(xp, yp, dmWBig, dmHBig);
-                        var imageData2 = ctx.getImageData(0, xpm, dmWSmall, dmHSmall);
-                        ctx2.drawImage(img2, 0, 0);
-                        ctx2.putImageData(imageData, xp, yp);
-                        ctx2.putImageData(imageData2, 0, xpm);
+                    var ratio = 3.325;
+                    if (width === 2048 && height !== 2048) {
+                        ratio = 3.6;
                     }
+                    var yp = height - ((height / ratio) + dmHBig);
+                    var xp = width - dmWBig;
+
+                    var xpm = height - dmHSmall - 28;
+
+                    //Extract and put together
+                    var imageData = ctx.getImageData(xp, yp, dmWBig, dmHBig);
+                    var imageData2 = ctx.getImageData(0, xpm, dmWSmall, dmHSmall);
+                    ctx2.drawImage(img2, 0, 0);
+                    ctx2.putImageData(imageData, xp, yp);
+                    ctx2.putImageData(imageData2, 0, xpm);
+
 
                     var dstImg = $('#newImg').get(0);
                     var dataImg = canvas2.toDataURL("image/jpeg");
@@ -98,13 +85,12 @@
                     $("body").css("cursor", "default");
 
                     download(myimg, dataImg);
-
-                    //location.reload();
                 }
             }
 
             $(document).ready(function () {
                 $("#btnCut").on("click", function () {
+                    imagesLoaded = 0;
                     var str = $("#myImg").val();
                     if (str != null || str != undefined) {
                         const regex = /gm(\d+)/g;
