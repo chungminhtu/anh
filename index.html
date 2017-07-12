@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="col-md-12">
-        <img id='newImg' width="100%" />
+        <img id='newImg' height="800px" />
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -41,6 +41,7 @@
         var imagesLoaded = 0;
         var myimg = "";
         var VEL = 0;
+        var FastDownload = false;
         var canvas = document.createElement("canvas");
         var canvas2 = document.createElement("canvas");
 
@@ -90,6 +91,9 @@
                 var dataImg = canvas2.toDataURL("image/jpeg");
                 dstImg.src = dataImg;
                 $("body").css("cursor", "default");
+                if (FastDownload === true) {
+                    Download();
+                }
             }
         }
 
@@ -117,6 +121,7 @@
 
         $(document).ready(function () {
             $("#btnPreview").on("click", function () {
+                FastDownload = false;
                 VEL = 0;
                 Preview();
             });
@@ -134,8 +139,8 @@
             });
 
             $("#btnPreviewDown").on("click", function () {
+                FastDownload = true;
                 Preview();
-                Download();
             });
         });
 
