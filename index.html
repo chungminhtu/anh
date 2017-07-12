@@ -11,21 +11,22 @@
 
 <body>
     <div class="col-md-12" style="margin:10px 0;">
-        <div class="col-md-9">
+        <div class="col-md-8">
             <input class="form-control" style="width:100%;" placeholder="Nhập đường link ảnh cần lấy" type="text" id="myImg" /></div>
-        <div class="col-md-3">
-            <div class="col-md-9">
+        <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="btn-group">
                     <button class="btn btn-info btn-md" id="btnPreview">Preview</button>
                     <button class="btn btn-success btn-md" id="btnUp">Up</button>
                     <button class="btn btn-danger btn-md" id="btnDown">Down</button>
                 </div>
             </div>
-            <div class="col-md-3">
-               <div class="btn-group">
-                     <button class="btn btn-primary btn-md" id="btnCut">Download</button>
-               <button class="btn btn-danger btn-md" id="btnPreviewDown">Preview&Down</button>
-                </div>   </div>
+            <div class="col-md-6">
+                <div class="btn-group">
+                    <button class="btn btn-primary btn-md" id="btnCut">Download</button>
+                    <button class="btn btn-success btn-md" id="btnPreviewDown">Preview&Down</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="col-md-12">
@@ -127,14 +128,14 @@
                 VEL += 10;
                 Preview();
             });
-            $("#btnCut").on("click", function () { 
+            $("#btnCut").on("click", function () {
                 Download();
                 location.reload(true);
             });
 
-             $("#btnPreviewDown").on("click", function () { 
+            $("#btnPreviewDown").on("click", function () {
                 Preview();
-                Download(); 
+                Download();
             });
         });
 
