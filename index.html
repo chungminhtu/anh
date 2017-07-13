@@ -11,17 +11,19 @@
 
 <body>
     <div class="col-md-12" style="margin:10px 0;">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <input class="form-control" style="width:100%;" placeholder="Nhập đường link ảnh cần lấy" type="text" id="myImg" /></div>
-        <div class="col-md-4">
-            <div class="col-md-6">
+        <div class="col-md-5">
+            <div class="col-md-7">
                 <div class="btn-group">
                     <button class="btn btn-info btn-md" id="btnPreview">Preview</button>
-                    <button class="btn btn-success btn-md" id="btnUp">Up</button>
-                    <button class="btn btn-danger btn-md" id="btnDown">Down</button>
+                    <button class="btn btn-success btn-md" id="btnUpPlus5">+5</button>
+                    <button class="btn btn-danger btn-md" id="btnUpMinus5">-5</button>
+                    <button class="btn btn-success btn-md" id="btnDownPlus1">+1</button>
+                    <button class="btn btn-danger btn-md" id="btnDownMinus1">-1</button>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="btn-group">
                     <button class="btn btn-primary btn-md" id="btnCut">Download</button>
                     <button class="btn btn-success btn-md" id="btnPreviewDown">Preview&Down</button>
@@ -125,12 +127,20 @@
                 VEL = 0;
                 Preview();
             });
-            $("#btnUp").on("click", function () {
-                VEL += -10;
+            $("#btnUpPlus5").on("click", function () {
+                VEL += 5;
                 Preview();
             });
-            $("#btnDown").on("click", function () {
-                VEL += 10;
+            $("#btnUpMinus5").on("click", function () {
+                VEL += -5;
+                Preview();
+            });
+            $("#btnDownMinus1").on("click", function () {
+                VEL += -1;
+                Preview();
+            });
+            $("#btnDownPlus1").on("click", function () {
+                VEL += 1;
                 Preview();
             });
             $("#btnCut").on("click", function () {
