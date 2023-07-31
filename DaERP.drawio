@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-31T15:11:46.689Z" agent="Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1" etag="JjibiEaYmEEO7eITYAz3" version="21.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-31T15:13:35.877Z" agent="Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1" etag="ExWBV6DJtGVp4S0h3WYW" version="21.6.6" type="github">
   <diagram name="Page-1" id="0nL1eGnsIj_tT8AlzVXJ">
     <mxGraphModel dx="1099" dy="547" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -12,11 +12,34 @@
             <mxPoint x="-11" y="-25" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="PdNtbmLHOuxER-7L1oVg-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PdNtbmLHOuxER-7L1oVg-1" target="PdNtbmLHOuxER-7L1oVg-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="209" y="283" />
+              <mxPoint x="209" y="283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="PdNtbmLHOuxER-7L1oVg-1" value="angular&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="125" y="165" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="PdNtbmLHOuxER-7L1oVg-2" value="Backend" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="506" y="156" width="163" height="92" as="geometry" />
+        <mxCell id="PdNtbmLHOuxER-7L1oVg-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PdNtbmLHOuxER-7L1oVg-2" target="PdNtbmLHOuxER-7L1oVg-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PdNtbmLHOuxER-7L1oVg-2" value="Backend" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="529" y="158.75" width="161.5" height="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="PdNtbmLHOuxER-7L1oVg-5" value="" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="145" y="335" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PdNtbmLHOuxER-7L1oVg-7" value="Backend" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="529" y="309" width="161.5" height="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="PdNtbmLHOuxER-7L1oVg-9" value="Backend" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="767" y="158.75" width="161.5" height="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="PdNtbmLHOuxER-7L1oVg-10" value="Backend" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="775" y="298" width="161.5" height="92.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
